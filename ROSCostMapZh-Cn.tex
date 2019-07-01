@@ -1,0 +1,69 @@
+%!TEX program = xelatex
+% 完整编译方法 1 pdflatex -> bibtex -> pdflatex -> pdflatex
+% 完整编译方法 2: xelatex -> bibtex -> xelatex -> xelatex
+\documentclass[lang=cn, zihao =-4]{elegantpaper}
+\input{sections/preamble.tex}
+
+\title{
+上下文敏感的导航分层代价地图\\
+{\Large(Layered Costmaps for Context-Sensitive Navigation)}
+}
+\author{
+\begin{tabular}{ll}
+{\kaishu 原作}:& David V. Lu \tabularnewline
+{\kaishu 译作}:& 罗辉武\thanks{Email: huiwu.luo@aliyun.com}
+\end{tabular}
+}
+
+%\institute{
+%\href{https://elegantlatex.org/}{Elegant\LaTeX{} 项目组}
+%}
+
+% 不需要版本信息，直接注释即可
+\version{0.1}
+% 不需要时间信息的话，直接注释即可
+\date{翻译日期：2019年06月28日}
+
+\addbibresource[location=local]{bibdata.bib}
+\begin{document}
+{
+	\pdfbookmark[1]{首页}{label:frontpage}%
+	\maketitle
+}
+
+\begin{abstract}
+\normalsize
+\indent 
+许多导航系统，包括普遍使用的ROS导航功能包，在单个代价图上规划机器人的行走路径，大部分信息皆存储于单个网格单元中。
+这种方法对需要生成最小长度的无冲突路径的应用非常成功，
+但是在面对动态的人群环境时，需要将costmap的值扩展到占用或自由这两种网格单元的属性之外，
+此时它会面临非常多的挑战。
+
+我们创建和实现了一种称为layered costmap(分层代价图)的新方法，
+该方法通过将costmap的数据处理分离到语义不相关的层(layer)来进行。
+每个layer仅跟踪一种类型的障碍物或约束，
+修改用于路径规划的主代价地图(master costmap)。
+我们展示了如何将算法与开源的ROS导航功能包进行集成，
+证明了我们的方法比当前使用单个(monolithic) costmap的做法更容易在特定的环境进行调整(tuning)。
+这种设计还可以在实际使用中实现加速实现路径规划，
+并且可以更清晰地表达原始架构所关注的信息。
+新算法还可以表达复杂的代价值，以便在使用上下文信息的环境中创建导航行为。
+\end{abstract}
+
+{
+	%\hypersetup{linkbordercolor=blue}
+	\hypersetup{linkcolor=blue}%if the colorlinks=true option of hyperref is used
+	\tableofcontents
+}
+
+%\begin{refsection}
+%	\input{sections/content.tex}
+%	\nocite{*}
+%	\printbibliography[heading=bibliography,title=【参考文献】]
+%\end{refsection}
+
+\input{sections/content.tex}
+%\nocite{*}
+\printbibliography[heading=bibliography,title=参考文献]
+
+\end{document}
