@@ -9,11 +9,18 @@
 ## Introduction
 
 ** A Chinese translation of David V. Lu's development article**:
+
 **这是一份由原作David V. Lu撰写的文章的中文翻译**：
 
 Lu D V, Hershberger D, Smart W D. **Layered costmaps for context-sensitive navigation**[C]//2014 IEEE/RSJ International Conference on Intelligent Robots and Systems. IEEE, 2014: 709-715.
 
-ROS的导航功能包系统架构里的costmap的组织采用的架构正是该文档陈述的架构，由此学习ROS或用ROS进行导航的同学有必要一读。
+**说明**：
+
+1. ROS的导航功能包系统架构里的costmap的组织采用的架构正是该文档陈述的架构，由此学习ROS或用ROS进行导航的同学有必要一读。
+
+2. 文档为pdf形式，可直接通过上面[链接](./ROSCostMapZh-Cn.pdf)直接下载阅读。
+
+3. 若你在阅读过程中觉得术语有就误，请在issues里指出，我看到后会第一时间改正。
 
 ## Check out source code
 
