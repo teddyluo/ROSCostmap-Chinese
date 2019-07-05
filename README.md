@@ -1,17 +1,19 @@
 “_Layered Costmaps for Context-Sensitive Navigation_” 中文翻译
 ==================
 
-- English Title: 《Layered Costmaps for Context-Sensitive Navigation》, [pdf(raw)](http://wustl.probablydavid.com/publications/IROS2014.pdf), [pdf (this site)](./pdfs/[IROS2014]ROS-Layered-Costmaps.pdf)
+- English title: 《Layered Costmaps for Context-Sensitive Navigation》, [pdf(raw)](http://wustl.probablydavid.com/publications/IROS2014.pdf), [pdf (this site)](./pdfs/[IROS2014]ROS-Layered-Costmaps.pdf)
 
-- Chinese Title: 《上下文敏感的导航分层代价地图》, pdf file, [link](ROSCostMapZh-Cn.pdf)
+- 中文标题: 《上下文敏感的导航分层代价地图》, pdf文件, [链接](./ROSCostMapZh-Cn.pdf)
 
 
 ## Introduction
 
-** A Chinese translation of David V. Lu's research article**:
+** A Chinese translation of David V. Lu's development article**:
+**这是一份由原作David V. Lu撰写的文章的中文翻译**：
 
 Lu D V, Hershberger D, Smart W D. **Layered costmaps for context-sensitive navigation**[C]//2014 IEEE/RSJ International Conference on Intelligent Robots and Systems. IEEE, 2014: 709-715.
 
+ROS的导航功能包系统架构里的costmap的组织采用的架构正是该文档陈述的架构，由此学习ROS或用ROS进行导航的同学有必要一读。
 
 ## Check out source code
 
@@ -39,11 +41,8 @@ Open a linux terminal, and input the following commands:
 
 ``` shell
 $ xelatex --synctex=-1  -shell-escape -8bit ROSCostMapZh-Cn.tex
-
 $ biber ROSCostMapZh-Cn
-
 $ xelatex --synctex=-1 -shell-escape -8bit ROSCostMapZh-Cn.tex
-
 $ xelatex --synctex=-1 -shell-escape -8bit ROSCostMapZh-Cn.tex
 ```
 
@@ -81,7 +80,7 @@ _Feel free to open issues about mistakes, or contribute directly by sending pull
 
 
 ## Declaration
-Due to limited time and energy, some sentences are directly borrowed from existed blogs. 
+由于个人精力极为有限，部分句子的翻译可能没有照顾到行业术语，请在issues里给出您的宝贵意见，我在空闲的时候尽量改正。 
 
 ---
 **Contact**: 
